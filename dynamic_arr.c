@@ -124,6 +124,15 @@ void destroy_Dynamic(struct dynamic_arr *pArr){
     free(pArr);
     pArr=NULL;
 }
+
+
+
+
+
+
+
+
+
 //测试
 struct Person
 {
