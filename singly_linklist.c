@@ -201,14 +201,6 @@ void destroy_list(linklist list){
     list=NULL;
 }
 
-//回调函数
-int myComparePerson(void * data1, void *data2)
-{
-	struct Person * p1 = data1;
-	struct Person * p2 = data2;
-
-	return strcmp(p1->name, p2->name) == 0 && p1->age == p2->age;
-}
 
 
 
@@ -226,6 +218,15 @@ void myPrintPerson(void * data)
 {
 	struct Person * p = data;
 	printf("姓名：%s  年龄：%d\n", p->name, p->age);
+}
+
+//回调函数
+int myComparePerson(void * data1, void *data2)
+{
+	struct Person * p1 = data1;
+	struct Person * p2 = data2;
+
+	return strcmp(p1->name, p2->name) == 0 && p1->age == p2->age;
 }
 
 void test01()
